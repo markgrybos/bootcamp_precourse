@@ -6,7 +6,8 @@ namespace w3schools_pre_course
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Mark");
+            Console.ReadKey();
         }
     }
 }

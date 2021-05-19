@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "w3schools_pre_course/1.0.0": {
+        "runtime": {
+          "w3schools_pre_course.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "w3schools_pre_course/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

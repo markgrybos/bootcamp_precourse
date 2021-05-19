@@ -1,0 +1,16 @@
+C:\Users\Mark\source\repos\w3schools_pre_course\w3schools_pre_course\bin\Debug\net5.0\w3schools_pre_course.exe
+C:\Users\Mark\source\repos\w3schools_pre_course\w3schools_pre_course\bin\Debug\net5.0\w3schools_pre_course.deps.json
+C:\Users\Mark\source\repos\w3schools_pre_course\w3schools_pre_course\bin\Debug\net5.0\w3schools_pre_course.runtimeconfig.json
+C:\Users\Mark\source\repos\w3schools_pre_course\w3schools_pre_course\bin\Debug\net5.0\w3schools_pre_course.runtimeconfig.dev.json
+C:\Users\Mark\source\repos\w3schools_pre_course\w3schools_pre_course\bin\Debug\net5.0\w3schools_pre_course.dll
+C:\Users\Mark\source\repos\w3schools_pre_course\w3schools_pre_course\bin\Debug\net5.0\ref\w3schools_pre_course.dll
+C:\Users\Mark\source\repos\w3schools_pre_course\w3schools_pre_course\bin\Debug\net5.0\w3schools_pre_course.pdb
+C:\Users\Mark\source\repos\w3schools_pre_course\w3schools_pre_course\obj\Debug\net5.0\w3schools_pre_course.csprojAssemblyReference.cache
+C:\Users\Mark\source\repos\w3schools_pre_course\w3schools_pre_course\obj\Debug\net5.0\w3schools_pre_course.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mark\source\repos\w3schools_pre_course\w3schools_pre_course\obj\Debug\net5.0\w3schools_pre_course.AssemblyInfoInputs.cache
+C:\Users\Mark\source\repos\w3schools_pre_course\w3schools_pre_course\obj\Debug\net5.0\w3schools_pre_course.AssemblyInfo.cs
+C:\Users\Mark\source\repos\w3schools_pre_course\w3schools_pre_course\obj\Debug\net5.0\w3schools_pre_course.csproj.CoreCompileInputs.cache
+C:\Users\Mark\source\repos\w3schools_pre_course\w3schools_pre_course\obj\Debug\net5.0\w3schools_pre_course.dll
+C:\Users\Mark\source\repos\w3schools_pre_course\w3schools_pre_course\obj\Debug\net5.0\ref\w3schools_pre_course.dll
+C:\Users\Mark\source\repos\w3schools_pre_course\w3schools_pre_course\obj\Debug\net5.0\w3schools_pre_course.pdb
+C:\Users\Mark\source\repos\w3schools_pre_course\w3schools_pre_course\obj\Debug\net5.0\w3schools_pre_course.genruntimeconfig.cache
