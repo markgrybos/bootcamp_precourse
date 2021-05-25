@@ -10,6 +10,7 @@ namespace w3schools_pre_course
         public int Attack { get; set; }
         public int Defense { get; set; }
         public int Level { get; set; }
+        public int Health { get; set; }
 
         public Monster()
         {
@@ -60,6 +61,7 @@ namespace w3schools_pre_course
             }
             Attack = Attack * Level;
             Defense = Defense * Level;
+            Health = 5 * Level;
         }
 
         private string monsterTypeRandomizer()
@@ -84,7 +86,7 @@ namespace w3schools_pre_course
         private class Dragon
         {
             public int Attack = 15;
-            public int Defense = 10;
+            public int Defense = 7;
         }
         private class Orc
         {
@@ -99,7 +101,7 @@ namespace w3schools_pre_course
         private class Troll
         {
             public int Attack = 3;
-            public int Defense = 12;
+            public int Defense = 6;
         }
         private class Vampire
         {
@@ -113,8 +115,43 @@ namespace w3schools_pre_course
         }
     }
 
-    abstract class Player
+    class Player
     {
+        public int Health { get; set; }
+        public int Attack { get; set; }
+        public string Name { get; set; }
+        public string AttackStyle { get; set; }
+
+        public Player(string playerName, string playerAttackStyle)
+        {
+            Name = playerName;
+            if (playerAttackStyle.ToLower() == "metal")
+            {
+                AttackStyle = "metal";
+                Attack = 6;
+                Health = 10;
+            }
+            else if (playerAttackStyle.ToLower() == "magic")
+            {
+                AttackStyle = "magic";
+                Attack = 10;
+                Health = 5;
+            }
+            else
+            {
+                AttackStyle = "bare fist";
+                Attack = 3;
+                Health = 5;
+            }
+        }
+        public int attackTarget(int monsterHealth, int monsterDefense)
+        {
+            int playerAttack = Attack - monsterDefense;
+            Console.WriteLine($"{Name} is attacking for {playerAttack} damage!");
+            return monsterHealth = monsterHealth - playerAttack;
+
+        }
+        
 
     }
     class Program
@@ -123,11 +160,29 @@ namespace w3schools_pre_course
         {
             for(int i = 0; i < 100; i++)
             {
+                Console.WriteLine("What is your name combatant?");
+                string name = Console.ReadLine();
+                Console.WriteLine("Howdy, do you fight with 'metal' or 'magic'?");
+                string attackStyle = Console.ReadLine();
+                Player player = new Player(name, attackStyle);
+                Console.WriteLine($"Welcome {player.Name}! Prepare your {player.AttackStyle.ToUpper()} you have {player.Health} health and an attack of {player.Attack}");
+
                 Monster minion = new Monster();
                 Console.WriteLine($"This is a level {minion.Level} {minion.Type}.");
-                Console.WriteLine($"It has {minion.Attack} Attack and {minion.Defense} defense.");
+                Console.WriteLine($"It has {minion.Attack} attack and {minion.Defense} defense with a total of {minion.Health} health");
+
+                while (minion.Health > 0)
+                {
+                    minion.Health = player.attackTarget(minion.Health, minion.Defense);
+                }
+                Console.WriteLine("Monster has been slain!");
                 Thread.Sleep(1500);
                 i++;
+                string end = Console.ReadLine();
+                if (end.ToLower() == "q")
+                {
+                    break;
+                }
             }
          }
     }
