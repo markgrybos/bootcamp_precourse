@@ -147,7 +147,7 @@ namespace w3schools_pre_course
         public int attackTarget(int monsterHealth, int monsterDefense)
         {
             int playerAttack = Attack - monsterDefense;
-            Console.WriteLine($"{Name} is attacking for {playerAttack} damage!");
+            Console.WriteLine($"{Name} is attacking for {playerAttack} damage! ({monsterDefense} damage was blocked)");
             return monsterHealth = monsterHealth - playerAttack;
 
         }
@@ -158,22 +158,30 @@ namespace w3schools_pre_course
     {
         static void Main(string[] args)
         {
-            for(int i = 0; i < 100; i++)
-            {
-                Console.WriteLine("What is your name combatant?");
-                string name = Console.ReadLine();
-                Console.WriteLine("Howdy, do you fight with 'metal' or 'magic'?");
-                string attackStyle = Console.ReadLine();
-                Player player = new Player(name, attackStyle);
-                Console.WriteLine($"Welcome {player.Name}! Prepare your {player.AttackStyle.ToUpper()} you have {player.Health} health and an attack of {player.Attack}");
+            Console.WriteLine("What is your name combatant?");
+            string name = Console.ReadLine();
+            Console.WriteLine("Howdy, do you fight with 'metal' or 'magic'?");
+            string attackStyle = Console.ReadLine();
+            Player player = new Player(name, attackStyle);
+            Console.WriteLine($"Welcome {player.Name}! Prepare your {player.AttackStyle.ToUpper()} you have {player.Health} health and an attack of {player.Attack}");
 
+            for (int i = 0; i < 100; i++)
+            {
                 Monster minion = new Monster();
                 Console.WriteLine($"This is a level {minion.Level} {minion.Type}.");
                 Console.WriteLine($"It has {minion.Attack} attack and {minion.Defense} defense with a total of {minion.Health} health");
 
                 while (minion.Health > 0)
                 {
-                    minion.Health = player.attackTarget(minion.Health, minion.Defense);
+                    if (player.Attack < minion.Defense)
+                    {
+                        Console.WriteLine("You are unable to get through their defenses! You have died!");
+                        break;
+                    }
+                    else
+                    {
+                        minion.Health = player.attackTarget(minion.Health, minion.Defense);
+                    }
                 }
                 Console.WriteLine("Monster has been slain!");
                 Thread.Sleep(1500);
